@@ -1,0 +1,21 @@
+body {
+	width:	950px;
+}
+.octopus {
+	margin: 10em 30% 1em 30%;
+	z-index: 1;
+	position: absolute;
+}
+
+.hat {
+	position: absolute;
+	z-index: 3;
+	margin: 75px 45% 1em 28%
+
+}
+
+.glasses {
+	position: absolute;
+	z-index: 4;
+	margin: 260px 45% 1em 35%;
+}
