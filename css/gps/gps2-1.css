@@ -1,3 +1,66 @@
-body {
-	background: purple;
+body{
+  max-width: 960px;
+}
+header {
+  background:red;
+  display:block;
+  font-family: arial;
+}
+header p{
+  font-style:italic;
+}
+
+h1{
+  color: white;
+  text-align: center;
+  border: 2px solid white;
+}
+
+.column-1 {
+  background-image:url(https://assets-cdn.github.com/images/modules/logos_page/GitHub-Mark.png);
+  width: 42%;
+  display: inline-block;
+  vertical-align: top;
+  padding: 25px;
+  color: pink;
+ 
+  /* float: left; */
+}
+.column-1 h2{
+  color: red;
+  text-align: center;
+}
+.column-1 p{
+  font-weight: bold;
+}
+.column-1 li{
+  list-style-type: disc;
+}
+
+.column-2 {
+  background-color: purple;
+  width: 42%;
+  display: inline-block;
+  text-align: top;
+  padding: 25px;
+
+  /* display: right; */
+}
+
+.column-2 h2{
+  color: green;
+  text-align: center;
+
+}
+
+footer {
+  background: blue;
+}
+
+header , footer {
+  background: green; 
+}
+
+a:hover {
+  color: orange;
 }
