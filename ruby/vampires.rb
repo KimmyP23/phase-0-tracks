@@ -9,10 +9,10 @@ until start_num == num_employees
 	puts "How old are you?"
 	age = gets.chomp.to_i
 	puts "What year were you born?"
-	year = gets.chomp.to_i
-	puts "Our company cafeteria serves garlic bread. Should we order some for you? (yes/no)"
+	birth_year = gets.chomp.to_i
+	puts "Our company cafeteria serves garlic bread. Should we order some for you?(yes/no)"
 	garlic_bread = gets.chomp.downcase
-	puts "Would you like to enroll in the company's health insurance? (yes/no)"
+	puts "Would you like to enroll in the company's health insurance?(yes/no)"
 	health_insurance = gets.chomp.downcase
 
 	puts "Do you have any allergies?(yes/no)"
@@ -32,7 +32,7 @@ until start_num == num_employees
 	correct_year = 2016 - age
 
 
-	if year == correct_year
+	if birth_year == correct_year
 		knows_correct_year = true
 	else
 		no_correct_year = true
