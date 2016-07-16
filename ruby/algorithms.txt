@@ -1,0 +1,48 @@
+Personal Robot:
+
+For each person that enters the elevator:
+	Until you hear a response, or until you have attempted three times:
+   		Ask what floor they are trying to reach
+   		Wait three second's for a response
+   	If no response is heard and three attempts have been made:
+   		Press lobby button to reach ground level
+
+   		After person has vocalized desired floor:
+   			Confirm desired floor by repeating desired floor only once.
+   			If person says "Yes",
+   				Then proceed to desired floor by pressing the desired floor level button
+   				Starting from floor 1 move on to the proceeding floor button until desired floor button is reached
+   			If person says "No"
+   				Once again, ask what floor they are trying to reach.
+   				After person has vocalized desired floor:
+   					Confirm desired floor by repeating desired floor only once.
+   					Repeat until you have confirmed desired floor.
+   					Then proceed to desired floor by pressing the floor level button
+   					Starting from floor 1 move on to the processing button until desired floor is reached
+   		After reaching desired, open floor door by pressing open door button
+   			Thank person for using your service 
+   			Wish them a swell day
+
+
+Making Tea:
+1. Remove tea kettle top, and fill tea kettle with desire amount of water from water facet.
+2. Once you have reached your desired level of water, turn off facet and reattach tea kettle top.
+3. Place tea kettle on stove burner.
+4. Turn on stove burner, and select desired heat level from (low to high) flame level.
+5. Wait until water is boiling. When water is boiling, tea kettle should make a whistling noice from spout. 
+6. Once you heard the tea whistling, turn off stover burner.
+7. Select a tea cup to drink from.
+8. If tea kettle has heat resistant handle, then grab hand and pour the hot water into a tea cup.
+8. If kettle does not have a heat resistant handle, then use an avon mit to grab handle and pour the hot water into a tea cup.
+9. Place tea kettle back on stove burner. 
+10. Select a desired tea bag from pantry.
+11. Remove tea bag from pagaging.
+12. Seep tea bag into hot water.
+13. Wait 5 minutes for tea to seep and water to cool.
+14. At five minutes, check water temperature to see if the tea is drinkable by place a tip of your finger in the tea.
+15. If temperature suits your desire, enjoy your tea.
+16. If tea temperature is too hot, then periodically check every two minutes until you reach your desired temperature.
+17. Once you reach your desired temperature, enjoy your tea.
+
+
+
