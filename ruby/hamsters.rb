@@ -1,18 +1,24 @@
 puts "What is hamster name?"
 name = gets.chomp
+
 puts "What is the volume level for this hamster from 1-10?"
 volume_level = gets.chomp.to_i
+
 puts "What is the fur color?"
 fur_color = gets.chomp
+
 puts "Is the hamster a good candidate for adoption? (yes/no)"
 adoption_candidate = gets.chomp.downcase
+
 if adoption_candidate == "yes"
 	adoption_candidate = true
 else
 	adoption_candidate = false
 end
+
 puts "What is the estimated age?"
-age = gets.chomp.to_i
+age = gets.chomp.to_f
+
 if age == ""
 	age = nil
 end
