@@ -4,36 +4,41 @@
 # When there's more than one suspect who could have
 # committed the crime, add additional calls to prove it.
 
-# "iNvEsTiGaTiOn".<???>
+puts "iNvEsTiGaTiOn".swapcase
 # => “InVeStIgAtIoN”
 
-# "zom".<???>
+ puts "zom".insert(1, "o")
 # => “zoom”
 
-# "enhance".<???>
+puts "enhance".center(20)
 # => "    enhance    "
 
-# "Stop! You’re under arrest!".<???>
+puts "Stop! You’re under arrest!".upcase
 # => "STOP! YOU’RE UNDER ARREST!"
 
-# "the usual".<???>
+a = "the usual" 
+a << " suspects"
+a.concat(18)
+puts a
 #=> "the usual suspects"
 
-# " suspects".<???>
+b = " suspects"
+b.prepend("the usual")
+puts b
 # => "the usual suspects"
 
-# "The case of the disappearing last letter".<???>
+puts "The case of the disappearing last letter".chomp
 # => "The case of the disappearing last lette"
 
-# "The mystery of the missing first letter".<???>
+puts "The mystery of the missing first letter".slice(1..39)
 # => "he mystery of the missing first letter"
 
-# "Elementary,    my   dear        Watson!".<???>
+puts "Elementary,    my   dear        Watson!".split.join(" ")
 # => "Elementary, my dear Watson!"
 
-# "z".<???>
+puts "z".ord
 # => 122 
 # (What is the significance of the number 122 in relation to the character z?)
 
-# "How many times does the letter 'a' appear in this string?".<???>
+puts "How many times does the letter 'a' appear in this string?".count("a")
 # => 4
