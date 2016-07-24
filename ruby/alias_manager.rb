@@ -19,7 +19,42 @@ def alias_creator(first_name, last_name)
   	#change first_name and Last_name variables into two arrays
   	first_name_array = first_name.chars
   	last_name_array = last_name.chars
+  	#use .map! to iterate through each array and compare vowels and consonants
+  	first_name_array.map! do|letter|
+		if vowels.include?(letter)
+			if letter == "u"
+				vowels[0]
+			else
+				vowels[vowels.index(letter) + 1]
+			end
+		elsif consonants.include?(letter)
+			if letter == "z"
+				consonants[0]
+			else
+				consonants[consonants.index(letter) + 1]
+			end
+		end
+	end
+	last_name_array.map! do|letter|
+		if vowels.include?(letter)
+			if letter == "u"
+				vowels[0]
+			else
+				vowels[vowels.index(letter) + 1]
+			end
+
+		elsif consonants.include?(letter)
+			if letter == "z"
+				consonants[0]
+			else
+				consonants[consonants.index(letter) + 1]
+			end
+		end
+	end
+	#create spy_alias variable
+ 	spy_alias = last_name_array.join('').capitalize + " " + first_name_array.join('').capitalize
  end
+
 
 
 
