@@ -34,7 +34,53 @@ def fib(num)
     fib_array
 end
 
-puts fib(6)
+p fib(6)
 
 #use fib_array.last when you just want to check the last element in the array
 # p fib(100) == 218922995834555169026
+
+#Release 5.6.2
+def bubble_sort(array)
+  #total number values in loop
+  n = array.length
+  loop do
+    #iterate through entire array and chech each element
+    #and compare 
+    #example array
+    #[1, 4, 1, 3 , 4, 1, 3, 3]
+    #compare 1 & 4 --> 1 is less than 4, stays the same
+    #[1, 4, 1, 3 , 4, 1, 3, 3]
+    #compare 4 to 1 --> 4 is greater than 1, swap numbers
+    #[1, 1, 4, 3 , 4, 1, 3, 3]
+	#compare 4 to 3 --> 4 is great than 3, swap numbers
+    #[1, 1, 3, 4 , 4, 1, 3, 3]
+    #compare 4 to 4, equal so stay in place
+    #[1, 1, 3, 4 , 4, 1, 3, 3]
+    #compare 4 to 1, 4 is great than 1, swap numbers
+    #[1, 1, 3, 4, 1, 4, 3, 3]
+    #compare 4 to 3, 4 is great than 3, swap numbers
+    #[1, 1, 3, 4 , 1, 3, 4, 3]
+    #compare 4 to 3, 4 is great than 3, swap numbers
+    #[1, 1, 3, 4 , 1, 3, 3, 4]
+    #final result
+    #boolean swap set to false to break us out of our loop
+    swapped = false
+    #iterate through one minus the length of the array
+    (n-1).times do |i|
+      #if the array[i] is great than the proceeding element
+      if array[i] > array[i + 1]
+        #then we switch array order by setting order to the swapped order
+        array[i], array[i + 1] = array[i + 1], array[i]
+        swapped = true
+      end
+    end
+    break if not swapped
+  end
+    array
+end
+
+numbers = [1, 4, 1, 3 , 4, 1, 3, 3]
+p bubble_sort(numbers)
+
+
+
