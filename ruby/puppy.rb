@@ -19,3 +19,5 @@ chase cats
 dig holes
 wag tail
 pant
+play dead
+=end
