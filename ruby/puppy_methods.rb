@@ -63,3 +63,27 @@ class Cars
 end
 
 
+car_array = []
+
+until car_array.length == 50
+  car_array << Cars.new
+end
+
+p car_array
+car_array = []
+
+until car_array.length == 50
+  car_array << Cars.new
+end
+
+p car_array
+
+car_array.each do |car|
+  car.rev_engine(3)
+  car.burnout
+  car.roll_down_windows
+  car.roll_up_windows
+end
+  
+
+
