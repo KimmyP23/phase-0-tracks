@@ -69,8 +69,8 @@ def create_lots_of_santas(number_of_santas)
 	number_of_santas.times do |santa|
 		santa = Santa.new(example_genders.sample, example_ethnicities.sample)
 		santa.age = rand(140)
-		age = santa.age
 		santa.celebrate_birthday
+		santa.about_santa
 		santa.speak
 		santa.get_mad_at("Prancer")
 		santa.eat_milk_and_cookies("double fudge")
