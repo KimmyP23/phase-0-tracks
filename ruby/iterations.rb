@@ -15,7 +15,7 @@ def method_block(str)
   yield(name1, name2)
 end
 
-puts method_block("Hello there") { |name1, name2| puts "Testing our block #{name1} and #{name2}"}
+puts method_block("Nice to meet you!!") { |name1, name2| puts "Testing our block #{name1} and #{name2}"}
 
 # #Release: 1 
 # #declare an array and hash
