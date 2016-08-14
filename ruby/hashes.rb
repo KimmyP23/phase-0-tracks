@@ -8,7 +8,7 @@
 #create branches to accommodate any updates using if statements and then update any given variable
 #update hash with any chages
 
-puts "Please fill out your information:"
+puts "Please provide your information:"
 puts "Client name:"
 client_name = gets.chomp
 puts "Client age:"
@@ -34,60 +34,35 @@ interior_design_client[:number_of_children] = number_of_children
 interior_design_client[:decor_theme] = decor_theme
 interior_design_client[:city] = city
 interior_design_client[:on_budget] = on_budget
-puts interior_design_client
+
+puts "Current Client Information:"
+interior_design_client.each {|client_category, client_answer| puts "#{client_category}: #{client_answer}"}
 
 def display_keys(hash)
 	hash.each {|key, value| puts "#{key}"}
 end
 
 while true
-	puts "Would you like to make any updates?(yes/no)"
+	puts "Would you like to make any updates?(enter 'none' to finish)"
 	updates = gets.chomp.downcase
 	
-	break if updates != "yes"
+	break if updates == "none"
 
 	puts "What would you like to update?"
+	puts "\n"
 	display_keys(interior_design_client)
-	puts "Enter your selection:"
-	new_update = gets.chomp.downcase
-
-		if new_update == "client name"
-			puts "Enter new client name:"
-			new_client_name =gets.chomp
-			client_name = new_client_name
-		elsif new_update == "age"
-			puts "Enter new age:"
-			new_age = gets.chomp.to_i
-			age = new_age
-		elsif new_update == "number of children"
-			puts "Enter new number of children:"
-			new_number_of_children = gets.chomp.to_i
-			number_of_children = new_number_of_children
-		elsif new_update == "decor theme"
-			puts "Enter new decor theme:"
-			new_decor_theme = gets.chomp
-			decor_theme = new_decor_theme
-		elsif new_update == "city"
-			puts "Enter new city:"
-			new_city = gets.chomp
-			city = new_city
+	puts "\n"
+	puts "Enter your selection category:"
+	new_update = gets.chomp.to_sym
+	puts "What would you like to update #{new_update.upcase} to?"
+	new_update_value = gets.chomp
+		if new_update ==  :age || new_update_value == :number_of_children
+			interior_design_client[new_update] = new_update_value.to_i
 		else
-			puts "Is client on a buget?(yes/no)"
-			new_budget = gets.chomp.downcase
-				if new_budget == "yes"
-					budget = true
-				else
-					budget = false
-				end
-			on_budget = new_budget
-		end	
-	end
+			interior_design_client[new_update] = new_update_value
+		end
+end
+puts "Final Client Information"
+interior_design_client.each {|client_category, client_answer| puts "#{client_category}: #{client_answer}"}
 
-interior_design_client[:client_name] = client_name
-interior_design_client[:age] = age
-interior_design_client[:number_of_children] = number_of_children
-interior_design_client[:decor_theme] = decor_theme
-interior_design_client[:city] = city
-interior_design_client[:on_budget] = on_budget
 
-puts interior_design_client
