@@ -8,7 +8,6 @@ class Puppy
 
   def fetch(toy)
     puts "I brought back the #{toy}!"
-    toy
   end
   
   def speak(i)
@@ -29,13 +28,13 @@ class Puppy
   
 end
 
-puppy = Puppy.new
+charlie = Puppy.new
 
-puppy.fetch("ball")
-puppy.speak(3)
-puppy.roll_over
-puppy.dog_years(4)
-puppy.shake
+charlie.fetch("ball")
+charlie.speak(3)
+charlie.roll_over
+charlie.dog_years(4)
+charlie.shake
 
 #Release 2
 
