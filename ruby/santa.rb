@@ -37,47 +37,47 @@ class Santa
 		puts "Age: #{@age}"
 	end 
 end
-
+#Driver Code
 # santa_con1 = Santa.new
 # santa_con1.speak
 # santa_con1.eat_milk_and_cookies("chocolate chip")
 
 # santas = []
 # example_genders = ["female", "male", "agender", "gender fliud", "alien"]
-# example_ethnicities = ["Puerto Rican", "Chilean", "Spanish", "Russian", "martian"]
+# example_ethnicities = ["Unicorn", "Martian", "Lochness", "Kyrptonian", "Dinosaur"]
 
-# example_genders.length.times do |i|
-# 	santas << Santa.new(example_genders[i], example_ethnicities[i])
+# until santas.length == 5
+# 	santas << Santa.new(example_genders.sample, example_ethnicities.sample)
 # end
 
- # santas.each do |santa|
- # 	santa.speak
- # 	santa.eat_milk_and_cookies("peppermint bark")
- # 	santa.about_santa
- # 	santa.celebrate_birthday
- # 	santa.get_mad_at("Prancer")
- # 	santa. gender = "alien"
- # 	santa.age
- # 	santa.ethnicity
- # 	santa.about_santa
- # end
+#  santas.each do |santa|
+#  	santa.speak
+#  	santa.eat_milk_and_cookies("peppermint bark")
+#  	santa.about_santa
+#  	santa.celebrate_birthday
+#  	santa.get_mad_at("Prancer")
+#  	santa. gender = "alien"
+#  	santa.age
+#  	santa.ethnicity
+#  	santa.about_santa
+#  end
 
 def create_lots_of_santas(number_of_santas)
-	example_genders = ["agender", "female", "bigender", "male", "female", "gender fluid", "N/A"]
-	example_ethnicities = ["black", "Latino", "white", "Japanese-African", "prefer not to say", "Mystical Creature (unicorn)", "N/A"]
+	example_genders = ["female", "male", "agender", "gender fliud", "alien"]
+	example_ethnicities = ["Unicorn", "Martian", "Lochness", "Kyrptonian", "Dinosaur"]
 	
 	number_of_santas.times do |santa|
 		santa = Santa.new(example_genders.sample, example_ethnicities.sample)
 		santa.age = rand(140)
 		santa.celebrate_birthday
-		santa.about_santa
 		santa.speak
 		santa.get_mad_at("Prancer")
 		santa.eat_milk_and_cookies("double fudge")
+		santa.about_santa
 	end
 end
 
-create_lots_of_santas(2)
+create_lots_of_santas(10)
 
 
 
