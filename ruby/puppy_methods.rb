@@ -8,7 +8,6 @@ class Puppy
 
   def fetch(toy)
     puts "I brought back the #{toy}!"
-    toy
   end
   
   def speak(i)
@@ -29,61 +28,52 @@ class Puppy
   
 end
 
-puppy = Puppy.new
+charlie = Puppy.new
 
-puppy.fetch("ball")
-puppy.speak(3)
-puppy.roll_over
-puppy.dog_years(4)
-puppy.shake
+charlie.fetch("ball")
+charlie.speak(3)
+charlie.roll_over
+charlie.dog_years(4)
+charlie.shake
 
 #Release 2
 
-class Cars
+class Swimmer
   def initialize
-    puts "Initializing an amazing new cars instance..."
+    puts "Initializing a new swimmer instance..."
+  end
+
+  def swims_laps(num)
+    until num == 0
+      puts "#{num} laps to go"
+      num -= 1
+    end
   end
   
-  def rev_engine(i)
-    i.times { puts "Vrruumm!!!!!!!!" }
+  def wins_gold
+    puts "Gold Medal!!!!!!!!"
   end
   
-  def burnout
-    puts "*Burnsout*"
-  end
-  
-  def roll_down_windows
-    puts "*Rolls Down Windows*"
-  end
-  
-  def roll_up_windows
-    puts "*Rolls Up Windows*"
+  def breaks_world_record
+    puts "*New World Record*"
   end
 
 end
 
-
-car_array = []
-
-until car_array.length == 50
-  car_array << Cars.new
+swimmers = []
+while swimmers.size <= 50
+  swimmers << Swimmer.new
 end
 
-p car_array
-car_array = []
 
-until car_array.length == 50
-  car_array << Cars.new
+swimmers.each do |swimmer|
+  swimmer.swims_laps(3)
+  swimmer.wins_gold
+  swimmer.breaks_world_record
 end
 
-p car_array
 
-car_array.each do |car|
-  car.rev_engine(3)
-  car.burnout
-  car.roll_down_windows
-  car.roll_up_windows
-end
+
   
 
 
