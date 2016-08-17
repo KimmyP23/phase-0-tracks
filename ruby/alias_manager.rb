@@ -8,27 +8,21 @@
 #new first and last name
 
 
-def name_swap_array(first_name, last_name)
-	last_name.downcase.split('') + [" "] + first_name.downcase.split('')
+def name_swap_array(name)
+	name_array = name.downcase.split
+	name_swap = name_array[1] +" " + name_array[0]
+	name_swap_array = name_swap.split('')
 end
 
 def letter_exchange(array)
-	vowels = 'aeiou'
-	consonants = 'bcdfghjklmnpqrstvwxyz'
+	vowels = 'aeioua'
+	consonants = 'bcdfghjklmnpqrstvwxyzb'
 
 	array.map! do |letter|
 		if vowels.include?(letter)
-			if letter == 'u'
-				vowels[0]
-			else
-				vowels[vowels.index(letter) + 1]
-			end
+			vowels[vowels.index(letter) + 1]
 		elsif consonants.include?(letter)
-			if letter == 'z'
-				consonants[0]
-			else
-				consonants[consonants.index(letter) + 1]
-			end
+			consonants[consonants.index(letter) + 1]
 		else
 			letter
 		end
@@ -52,14 +46,12 @@ end
 
 alias_collection = {}
 while true
-	puts "Please provide your name to receive spy name: (or enter 'quit' to quit)"
+	puts "Please provide your first and last name to receive spy name: (or enter 'quit' to quit)"
 	name = gets.chomp
 
 	break if name == 'quit'
 
-	name_swap = name.split
-	name_switch = name_swap_array(name_swap[0], name_swap[1])
-
+	name_switch = name_swap_array(name)
 	exchange = letter_exchange(name_switch)
 	spy_name = secret_name(exchange)
 
