@@ -1,8 +1,7 @@
 #Release 1: Pseudocode
 def create_list(string)
-  list = Hash.new(1)
-  string_array = string.split
-  string_array.each do |item|
+  list = {}
+  string.split.each do |item|
     list[item] = 1
   end
   list
@@ -11,12 +10,13 @@ end
 grocery_list = create_list("carrots apples cereal pizza")
 puts grocery_list
 
-def add_item(list, item_name, quantity)
+def add_item(list, item_name, quantity=1)
   list[item_name] = quantity
   list
 end
 
 puts add_item(grocery_list, "cookies", 10)
+puts add_item(grocery_list, "watermelon")
 
 def remove_item(list, item_name)
   if list.has_key?(item_name)
