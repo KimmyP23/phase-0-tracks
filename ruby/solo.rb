@@ -55,12 +55,17 @@ num_wizards.times do |wizard|
 	puts "Please provide an age:"
 	age = gets.chomp.to_i
 	puts "\n"
-	puts "House selection a house:"
-	houses.each_with_index {|house, index| puts "#{house}: #{index}"}
-	puts "\n"
-	puts "Please provide house index:"
-	house_idx = gets.chomp.to_i
-	wizard = Wizard.new(name, age, houses[house_idx])
+
+	#version that prompts user for house attribute
+	# puts "House selection a house:"
+	# houses.each_with_index {|house, index| puts "#{house}: #{index}"}
+	# puts "\n"
+	# puts "Please provide house index:"
+	# house_idx = gets.chomp.to_i
+	# wizard = Wizard.new(name, age, houses[house_idx])
+
+	#version that randomly selects house attribute
+	wizard = Wizard.new(name, age, houses.sample)
 	puts "\n"
 	wizards << wizard
 end
