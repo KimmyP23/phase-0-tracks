@@ -10,12 +10,10 @@
 #fly broom method
 
 class Wizard
-	attr_reader :age
-	attr_accessor :name, :house
+	attr_reader :age, :name, :house
 	def initialize (name, age, house)
 		@name = name
 		@age = age
-		@muggle = false
 		@house = house
 	end
 
@@ -25,19 +23,21 @@ class Wizard
 
 	def cast_spell
 		waves_wand(3)
-		puts "Expecto Patronum!!!" if @house == "gryffindor"
-		puts "Wingardium Leviosa!!!" if @house == "ravenclaw"
-		puts "Expelliarmus!!!" if @house == "hufflepuff"
-		puts "Crucio!!!" if @house == "slytherin"
+		case
+			when house == "gryffindor" then puts "Expecto Patronum!!!"
+			when house == "ravenclaw" then puts "Wingardium Leviosa!!!"
+			when house == "hufflepuff" then puts "Expelliarmus!!!"
+			else puts "Crucio!!!"
+		end
 	end
 
 	def fly_broom(altitude)
 		"#{@name} is flying up to #{altitude} feet over Hogarts"
 	end
 	def print_wizard
-		puts "Name: #{@name}"
-		puts "Age: #{@age}"
-		puts "House: #{@house}"
+		puts "Name: #{name}"
+		puts "Age: #{age}"
+		puts "House: #{house}"
 	end
 end
 
