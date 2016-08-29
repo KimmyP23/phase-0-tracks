@@ -10,8 +10,8 @@
 
 def name_swap_array(name)
 	name_array = name.downcase.split
-	name_swap = name_array[1] +" " + name_array[0]
-	name_swap_array = name_swap.split('')
+	name_swap = name_array[1] + " " + name_array[0]
+	name_swap.chars
 end
 
 def letter_exchange(array)
