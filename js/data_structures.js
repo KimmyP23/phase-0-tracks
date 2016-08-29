@@ -1,7 +1,13 @@
 // Release 0: Horse Arrays
-var colors = ["red", "yellow", "turquoise", "sparkle"];
+// Declare two Arrays:
+	// four colors
+	// four names
+
+var colors = ["red", "maroon", "turquoise", "indigo"];
 var horses = ["Seabiscuit", "Secretariat", "Bojack", "Shadowfax"];
 
+// Add additional color to color array
+// Add additional name to name array 
 colors.push("cerulean");
 horses.push("American Pharoah");
 
