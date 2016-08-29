@@ -1,21 +1,38 @@
-//pseudocode for reverse method
-//1. create a function that takes in a string
-//2. split the string into an array
-//3. with a for loop, add the indicies of the array, starting from the end 1 by 1 into a new/blank string
-//4. return the new string
+//Psuedocode:
+// Add a reverse function
+// input: takes a str
+// steps:
+	//1. declare a function reverse that takes in a string as a parameter
+	//2. declare a new str var
+	//3. with a for loop, start at the end of the string(using index) until the you reach the start of the string, decrease by -1  
+	//4. add each letter to the new string variable
+// output: the str inreverse
 
-function reverse(word){
-  //word_split = word.split;
-  var new_string = "";
-  for(var i = word.length - 1; i >= 0; i--){
-    new_string += word[i];
+function reverse(string){
+  var new_string = '';
+  for(var i = string.length - 1; i >= 0; i--){
+    new_string += string[i];
   }
-  //console.log(new_string);
   return new_string;
+}
+// Reverse function using an array
+
+function reverse2(string){
+	var reverseArr = []
+	for(var i = string.length-1; i >= 0; i-- ){
+		reverseArr.push(string[i]);
+	}
+	return (reverseArr.join(''));
 }
 
 //DRIVER CODE
-reverse_string = reverse("hello");
+console.log(reverse("peaches"));
+console.log(reverse2("peaches"));
+
+var reverse_string = reverse("hello");
+
 if (1 == 1){
   console.log(reverse_string);
 }
+
+
