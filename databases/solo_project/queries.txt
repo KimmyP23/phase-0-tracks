@@ -1,0 +1,56 @@
+1. Display the information in one table (either table is fine).
+
+Command: 
+SELECT * FROM houses;
+
+1|GRYffindor
+2|Hufflepuff
+3|Ravenclaw
+4|Slytherin
+
+2. Update an item that meets some condition (you can choose a condition that makes sense).
+
+Command:
+UPDATE wizards SET age= 17 WHERE name="Cedric Diggory";
+
+2|Cedric Diggory|17|2|True
+
+3. Display the information in both tables using one query.
+
+Command:
+SELECT * FROM wizards, houses WHERE wizards.house_id = houses.id;
+
+1|HARRY|14|1|True|1|GRYffindor
+2|Cedric Diggory|17|2|True|2|Hufflepuff
+3|Luna Lovegood|13|3|False|3|Ravenclaw
+4|Draco Malfoy|14|4|True|4|Slytherin
+
+4. Display a narrower selection of columns (fewer columns than all of them, in other words) from both tables using one query.
+
+Command:
+SELECT wizards.name, houses.name, wizards.quidditch_player FROM wizards JOIN houses ON wizards.house_id =houses.id;
+
+HARRY|GRYffindor|True
+Cedric Diggory|Hufflepuff|True
+Luna Lovegood|Ravenclaw|False
+Draco Malfoy|Slytherin|True
+
+5. Delete an item that meets some condition (you can choose a condition that makes sense).
+
+Command:
+DELETE FROM wizards WHERE house_id = 4;
+
+JOIN
+SELECT wizards.name, houses.name FROM wizards LEFT OUTER JOIN houses ON wizards.house_id = houses.id;
+
+HARRY|GRYffindor
+Cedric Diggory|Hufflepuff
+Luna Lovegood|Ravenclaw
+
+SELECT wizards.name, houses.name FROM wizards INNER JOIN houses ON wizards.house_id = houses.id;
+
+HARRY|GRYffindor
+Cedric Diggory|Hufflepuff
+Luna Lovegood|Ravenclaw
+
+
