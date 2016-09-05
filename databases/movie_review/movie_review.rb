@@ -68,7 +68,7 @@ while new_movie != "no"
 end
 
 loop do
-  puts "\nSelect a number from the list below to view your movie reviews. When finished, type 'done'"
+  puts "\nSelect a number from the list below to view your movie reviews. When finished, type '0'"
   puts "\n1. View all reviews \n2. View all recommended movies \n3. View all movies sorted by ranking"
   list_select = gets.chomp.to_i
   break if list_select == 0
