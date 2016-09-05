@@ -24,15 +24,14 @@ end
 #USER INTERFACE
 # Ask user about new movie to review
 puts "Welcome to Movie Reviewer - where the only movie critic's opinion that matters is YOURS!"
-new_movie = ''
-until new_movie == 'no'
-  puts "\nWould you like to add a new movie review? (yes/no)"
-  new_movie = gets.chomp
+puts "\nWould you like to add a new movie review? (yes/no)"
+new_movie = gets.chomp
 
+while new_movie != "no"
   puts "What movie did you see?"
   new_movie = gets.chomp
 
-  puts "On a scale from 1-10, what would you rate the movie?"
+  puts "On a scale from 1-5, what would you rate the movie?"
   user_rating = gets.chomp.to_i
 
     until user_rating > 0 && user_rating <= 5
@@ -64,4 +63,25 @@ until new_movie == 'no'
 
   # Add new review to movies database
   new_review(db, new_movie, user_rating, user_recommendation, user_comments)
+  puts "\nWould you like to add a new movie review? (yes/no)"
+  new_movie = gets.chomp.downcase
+end
+
+loop do
+  puts "\nSelect a number from the list below to view your movie reviews. When finished, type 'done'"
+  puts "\n1. View all reviews \n2. View all recommended movies \n3. View all movies sorted by ranking"
+  list_select = gets.chomp.to_i
+  break if list_select == 0
+
+  if list_select == 1
+    movie_list = db.execute("SELECT * FROM movie_reviews")
+  elsif list_select ==2
+    movie_list = db.execute("SELECT * FROM movie_reviews WHERE recommended = 'true'")
+  else list_select == 3
+    movie_list = db.execute("SELECT * FROM movie_reviews ORDER BY rating DESC")
+  end
+
+  movie_list.each do |movie|
+    puts "#{movie["name"]}: #{movie["rating"]} stars '#{movie["comments"]}'  Would recommend: #{movie["recommended"]}"
+  end
 end
