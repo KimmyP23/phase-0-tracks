@@ -21,6 +21,12 @@ get '/students/graduate' do
   erb :graduate
 end
 
+get '/students/cities' do
+  @students = db.execute("SELECT * FROM students")
+  @cities = {}
+  erb :cities
+end
+
 
 
 # create new students via
